@@ -22,3 +22,4 @@ Commands example:
 ./app datasets/web-NotreDame.txt -o results/web-NotreDame-out.txt -b
 
 
+Dataset (Web Graph): http://snap.stanford.edu/data
