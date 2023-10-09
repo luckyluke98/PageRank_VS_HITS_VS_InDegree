@@ -170,3 +170,17 @@ int cmp (const void * a, const void * b) {
 void sort_dict_f(struct dictionary_f * dict) {
     qsort(dict->dictionary, dict->dim, sizeof(struct dictionary_entry_f), cmp);
 }
+
+void free_dict_f(struct dictionary_f * dict) {
+    for (int i = 0; i < dict->dim; i++) {
+        free(dict->dictionary[i].value);
+    }
+    free(dict->dictionary);
+}
+
+void free_dict(struct dictionary * dict) {
+    for (int i = 0; i < dict->dim; i++) {
+        free(dict->dictionary[i].value);
+    }
+    free(dict->dictionary);
+}

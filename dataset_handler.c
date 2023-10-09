@@ -91,10 +91,7 @@ void order_dataset(char * filename, char * out_filename) {
     fclose(fp_out);
 
     // Free Memory
-    for (int i = 0; i < dict.dim; i++) {
-        free(dict.dictionary[i].value);
-    }
-    free(dict.dictionary);
+    free_dict(&dict);
     free(occ);
 }
 

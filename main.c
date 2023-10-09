@@ -68,6 +68,10 @@ int main(int argc, char **argv) {
         sort_dict_f(&h_dict);
 
         benchmark(arguments.output, pr_dict, id_dict, h_dict);
+
+        free_dict_f(&pr_dict);
+        free_dict_f(&id_dict);
+        free_dict_f(&h_dict);
     }
 
     // Free memory
@@ -77,6 +81,10 @@ int main(int argc, char **argv) {
     free(val_T);
     free(col_ind_T);
     free(row_ptr_T);
+
+    free(pr_rank);
+    free(h_rank);
+    free(id_rank);
     
     return 1;
 

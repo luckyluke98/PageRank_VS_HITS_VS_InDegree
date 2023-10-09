@@ -39,4 +39,7 @@ struct dictionary_f create_dict_f(float * vect, int dim);
 int cmp (const void * a, const void * b);
 void sort_dict_f(struct dictionary_f * dict);
 
+void free_dict_f(struct dictionary_f * dict);
+void free_dict(struct dictionary * dict);
+
 #endif //DICT_H_
